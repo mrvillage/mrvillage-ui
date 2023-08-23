@@ -847,6 +847,7 @@ dependencies = [
  "serde_json",
  "slotmap",
  "thiserror",
+ "tokio",
  "tracing",
 ]
 
@@ -1495,6 +1496,7 @@ dependencies = [
  "ciborium",
  "const_format",
  "gloo-net",
+ "inventory",
  "js-sys",
  "lazy_static",
  "once_cell",
