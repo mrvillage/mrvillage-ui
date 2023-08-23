@@ -1,4 +1,4 @@
-use leptos::{component, Scope, MaybeSignal, IntoView, view, ev::MouseEvent};
+use leptos::{component, Scope, MaybeSignal, IntoView, view, ev::MouseEvent, tracing};
 
 #[component]
 pub fn Button<OC>(cx: Scope, text: MaybeSignal<String>, on_click: OC) -> impl IntoView 
