@@ -941,6 +941,7 @@ name = "mrvillage-ui"
 version = "0.1.0"
 dependencies = [
  "leptos",
+ "serde",
 ]
 
 [[package]]

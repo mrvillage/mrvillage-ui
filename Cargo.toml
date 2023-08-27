@@ -10,7 +10,11 @@ include = ["/css"]
 version = "0.4"
 features = ["rustls", "serde", "nightly"]
 
+[dependencies.serde]
+version = "1.0"
+features = ["derive"]
+
 [features]
-default = ["ssr"]
+default = ["hydrate", "ssr"]
 hydrate = ["leptos/hydrate"]
 ssr = ["leptos/ssr"]
