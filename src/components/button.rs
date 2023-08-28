@@ -8,8 +8,8 @@ pub fn Button<OC>(
     cx: Scope,
     children: Children,
     on_click: OC,
-    color: MaybeSignal<ButtonColor>,
-    class: MaybeSignal<String>,
+    #[prop(into)] color: MaybeSignal<ButtonColor>,
+    #[prop(into, optional)] class: MaybeSignal<String>,
 ) -> impl IntoView
 where
     OC: Fn(MouseEvent) + 'static,
