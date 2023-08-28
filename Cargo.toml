@@ -5,6 +5,7 @@ edition = "2021"
 include = ["/css"]
 
 [dependencies]
+tracing = "0.1"
 
 [dependencies.leptos]
 version = "0.4"
