@@ -1,15 +1,6 @@
 use std::fmt::Display;
 
-use leptos::{
-    component,
-    ev::MouseEvent,
-    view,
-    Children,
-    IntoAttribute,
-    IntoView,
-    MaybeSignal,
-    Scope,
-};
+use leptos::{component, view, Children, IntoAttribute, IntoView, MaybeSignal, Scope};
 use serde::{Deserialize, Serialize};
 
 #[component]
