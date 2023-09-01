@@ -7,7 +7,7 @@ pub fn NumberInput<T>(
     #[prop(into, optional)] class: MaybeSignal<String>,
 ) -> impl IntoView
 where
-    T: IntoAttribute + Default + Clone + From<usize> + 'static,
+    T: IntoAttribute + Clone + From<usize> + 'static,
     (leptos::Scope, MaybeSignal<T>): IntoProperty,
 {
     let class = move || format!("mu-input {}", class());
