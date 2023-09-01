@@ -22,7 +22,7 @@ fn main() {
         )
         .unwrap()
     );
-    panic!(
+    println!(
         "{}",
         std::str::from_utf8(
             &Command::new("postcss")
