@@ -11,6 +11,6 @@ where
 {
     let class = move || format!("mu-input {}", class());
     view! { cx,
-        <input type="text" class=class prop:value=value value=value />
+        <input type="text" class=class prop:value=value />
     }
 }

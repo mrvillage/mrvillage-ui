@@ -12,7 +12,7 @@ pub fn Checkbox(
 ) -> impl IntoView {
     let class = move || format!("mu-checkbox {} {}", color(), class(),);
     view! { cx,
-        <input type="checkbox" class=class prop:value=value value=value />
+        <input type="checkbox" class=class prop:value=value />
     }
 }
 
