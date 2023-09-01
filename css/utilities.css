@@ -1,0 +1,33 @@
+.mu-less-bg {
+  @apply bg-stone-50 dark:bg-stone-950;
+}
+.mu-main-bg {
+  @apply bg-stone-100 dark:bg-stone-900;
+}
+.mu-more-bg {
+  @apply bg-stone-200 dark:bg-stone-800;
+}
+
+.mu-prose {
+  @apply prose prose-stone dark:prose-invert;
+}
+
+.mu-ring {
+  @apply focus:ring-2 focus:ring-stone-300 focus:dark:ring-stone-700;
+}
+
+.mu-transition-base {
+  @apply transition-all ease-in-out;
+}
+
+.mu-transition {
+  @apply duration-200 mu-transition-base;
+}
+
+.mu-transition-100 {
+  @apply duration-100 mu-transition-base;
+}
+
+.mu-text-color {
+    @apply text-stone-700 dark:text-stone-300;
+}

@@ -13,25 +13,22 @@ use leptos::{
 use serde::{Deserialize, Serialize};
 
 #[component]
-pub fn Button<OC>(
+pub fn Button(
     cx: Scope,
     children: Children,
-    on_click: OC,
     #[prop(into)] color: MaybeSignal<ButtonColor>,
     #[prop(into, optional)] class: MaybeSignal<String>,
-) -> impl IntoView
-where
-    OC: Fn(MouseEvent) + 'static,
-{
+) -> impl IntoView {
     let class = move || {
         format!(
-            "font-semibold text-white px-2 py-1 font-semibold rounded {} {}",
+            "rounded px-2.5 py-1 align-middle text-sm font-semibold mu-ring mu-transition \
+             select-none {} {}",
             color(),
             class(),
         )
     };
     view! { cx,
-        <button on:click=on_click class=class>
+        <button class=class>
             {children(cx)}
         </button>
     }
