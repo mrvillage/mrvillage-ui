@@ -1,11 +1,6 @@
 use std::process::Command;
 
 fn main() {
-    panic!(
-        "{:?} {:?}",
-        std::env::current_dir(),
-        std::env::current_exe()
-    );
     for entry in std::fs::read_dir("./src").unwrap() {
         let entry = entry.unwrap();
         let path = entry.path();
@@ -27,7 +22,7 @@ fn main() {
         )
         .unwrap()
     );
-    println!(
+    panic!(
         "{}",
         std::str::from_utf8(
             &Command::new("postcss")
