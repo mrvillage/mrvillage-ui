@@ -1,4 +1,4 @@
-use leptos::{component, view, IntoAttribute, IntoView, MaybeSignal, Scope};
+use leptos::{component, view, IntoAttribute, IntoProperty, IntoView, MaybeSignal, Scope};
 
 #[component]
 pub fn NumberInput<T>(
@@ -8,6 +8,7 @@ pub fn NumberInput<T>(
 ) -> impl IntoView
 where
     T: IntoAttribute + Default + Clone + 'static,
+    (leptos::Scope, MaybeSignal<T>): IntoProperty,
 {
     let class = move || format!("mu-input {}", class());
     view! { cx,
