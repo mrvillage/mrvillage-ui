@@ -1,11 +1,10 @@
 use std::fmt::Display;
 
-use leptos::{component, view, Children, IntoAttribute, IntoView, MaybeSignal, Scope};
+use leptos::{component, view, Children, IntoAttribute, IntoView, MaybeSignal};
 use serde::{Deserialize, Serialize};
 
 #[component]
 pub fn Button(
-    cx: Scope,
     children: Children,
     #[prop(into)] color: MaybeSignal<ButtonColor>,
     #[prop(into, optional)] class: MaybeSignal<String>,
@@ -18,9 +17,9 @@ pub fn Button(
             class(),
         )
     };
-    view! { cx,
+    view! {
         <button class=class>
-            {children(cx)}
+            {children()}
         </button>
     }
 }
