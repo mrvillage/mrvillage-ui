@@ -7,6 +7,6 @@ pub fn TextInput(
 ) -> impl IntoView {
     let class = move || format!("mu-input {}", class());
     view! {
-        <input type="text" class=class prop:value=value />
+        <input type="text" class=class value=value() prop:value=value />
     }
 }

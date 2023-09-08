@@ -8,11 +8,11 @@ pub fn NumberInput<T>(
     #[prop(into, optional)] class: MaybeSignal<String>,
 ) -> impl IntoView
 where
-    T: FromStr + 'static + Default + Clone,
+    T: FromStr + 'static + Default + Clone + IntoAttribute,
     wasm_bindgen::JsValue: From<T>,
 {
     let class = move || format!("mu-input {}", class());
     view! {
-        <input type="text" inputmode="numeric" class=class prop:value=value />
+        <input type="text" inputmode="numeric" class=class value=value() prop:value=value />
     }
 }
