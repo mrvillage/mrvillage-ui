@@ -13,7 +13,7 @@
 }
 
 .mu-ring {
-  @apply focus:ring-2 focus:ring-stone-300 focus:dark:ring-stone-700;
+  @apply focus:ring-3 focus:ring-stone-300 focus:dark:ring-stone-700 focus:border-0 outline-none;
 }
 
 .mu-transition-base {

@@ -6,7 +6,7 @@
 }
 
 .mu-input-base {
-  @apply m-0 min-w-0 select-none rounded border border-solid border-stone-300 dark:border-stone-700 mu-more-bg align-middle text-sm mu-ring mu-transition-100 outline-none mu-text-color;
+  @apply m-0 min-w-0 select-none rounded border border-solid border-stone-300 dark:border-stone-700 mu-more-bg align-middle text-sm mu-ring mu-transition-100 mu-text-color;
 }
 
 .mu-input {
