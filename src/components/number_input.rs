@@ -32,12 +32,3 @@ where
         <input type="text" inputmode="numeric" class=class prop:value=value />
     }
 }
-
-#[component]
-pub fn Test() -> impl IntoView {
-    let value: i128 = 0;
-    let signal = Signal::derive(move || value);
-    view! {
-        <NumberInput<i128> value=signal class="" />
-    }
-}
