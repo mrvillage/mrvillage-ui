@@ -1,6 +1,6 @@
 use std::str::FromStr;
 
-use leptos::{component, view, IntoAttribute, IntoView, MaybeSignal, Signal, SignalGet};
+use leptos::{component, view, IntoAttribute, IntoView, MaybeSignal, Signal};
 
 pub trait NumMarker {}
 
@@ -25,7 +25,6 @@ pub fn NumberInput<T>(
     #[prop(into, optional)] class: MaybeSignal<String>,
 ) -> impl IntoView
 where
-    Signal<T>: Into<MaybeSignal<T>> + SignalGet<Value = T>,
     T: FromStr + 'static + Default,
 {
     let class = move || format!("mu-input {}", class());
@@ -39,6 +38,6 @@ pub fn Test() -> impl IntoView {
     let value: i128 = 0;
     let signal = Signal::derive(move || value);
     view! {
-        <NumberInput value=signal class="" />
+        <NumberInput<i128> value=signal class="" />
     }
 }
