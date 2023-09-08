@@ -2,23 +2,6 @@ use std::str::FromStr;
 
 use leptos::{component, view, IntoAttribute, IntoView, MaybeSignal};
 
-pub trait NumMarker {}
-
-impl NumMarker for i8 {}
-impl NumMarker for i16 {}
-impl NumMarker for i32 {}
-impl NumMarker for i64 {}
-impl NumMarker for i128 {}
-impl NumMarker for isize {}
-impl NumMarker for u8 {}
-impl NumMarker for u16 {}
-impl NumMarker for u32 {}
-impl NumMarker for u64 {}
-impl NumMarker for u128 {}
-impl NumMarker for usize {}
-impl NumMarker for f32 {}
-impl NumMarker for f64 {}
-
 #[component]
 pub fn NumberInput<T>(
     #[prop(into, optional)] value: MaybeSignal<T>,
