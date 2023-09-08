@@ -1,4 +1,6 @@
-use leptos::{component, view, IntoAttribute, IntoView, MaybeSignal, Signal};
+use std::str::FromStr;
+
+use leptos::{component, view, IntoAttribute, IntoView, MaybeSignal, Signal, SignalGet};
 
 pub trait NumMarker {}
 
@@ -18,17 +20,16 @@ impl NumMarker for f32 {}
 impl NumMarker for f64 {}
 
 #[component]
-pub fn NumberInput(
-    #[prop(into, optional)] value: MaybeSignal<i128>,
+pub fn NumberInput<T>(
+    #[prop(into, optional)] value: MaybeSignal<T>,
     #[prop(into, optional)] class: MaybeSignal<String>,
 ) -> impl IntoView
-// where
-    // Signal<T>: Into<MaybeSignal<T>> + SignalGet<T>,
-    // T: NumMarker + 'static + Default,
-    // S: Into<String> + 'static + std::fmt::Display + std::default::Default + Clone,
+where
+    Signal<T>: Into<MaybeSignal<T>> + SignalGet<Value = T>,
+    T: FromStr + 'static + Default,
 {
     let class = move || format!("mu-input {}", class());
-    view! { cx,
+    view! {
         <input type="text" inputmode="numeric" class=class prop:value=value />
     }
 }
