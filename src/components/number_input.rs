@@ -1,6 +1,6 @@
 use std::str::FromStr;
 
-use leptos::{component, view, IntoAttribute, IntoView, MaybeSignal, Signal};
+use leptos::{component, view, IntoAttribute, IntoView, MaybeSignal};
 
 pub trait NumMarker {}
 
@@ -25,7 +25,8 @@ pub fn NumberInput<T>(
     #[prop(into, optional)] class: MaybeSignal<String>,
 ) -> impl IntoView
 where
-    T: FromStr + 'static + Default,
+    T: FromStr + 'static + Default + Clone,
+    wasm_bindgen::JsValue: From<T>,
 {
     let class = move || format!("mu-input {}", class());
     view! {

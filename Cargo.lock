@@ -981,6 +981,7 @@ dependencies = [
  "leptos",
  "serde",
  "tracing",
+ "wasm-bindgen",
 ]
 
 [[package]]
