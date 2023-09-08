@@ -1,6 +1,6 @@
 use std::str::FromStr;
 
-use leptos::{component, view, IntoAttribute, IntoView, MaybeSignal};
+use leptos::{component, view, IntoAttribute, IntoView, MaybeSignal, SignalGetUntracked};
 
 #[component]
 pub fn NumberInput<T>(
@@ -13,6 +13,6 @@ where
 {
     let class = move || format!("mu-input {}", class());
     view! {
-        <input type="text" inputmode="numeric" class=class value=value() prop:value=value />
+        <input type="text" inputmode="numeric" class=class value=value.get_untracked() prop:value=value />
     }
 }
