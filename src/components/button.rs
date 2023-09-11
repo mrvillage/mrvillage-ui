@@ -46,6 +46,7 @@ pub enum ButtonColor {
     Fuchsia,
     Pink,
     Rose,
+    Custom(String),
 }
 
 impl Display for ButtonColor {
@@ -83,9 +84,11 @@ impl Display for ButtonColor {
             },
             Pink => write!(f, "bg-pink-700 hover:bg-pink-800 active:bg-pink-900"),
             Rose => write!(f, "bg-rose-700 hover:bg-rose-800 active:bg-rose-900"),
+            Custom(s) => write!(f, "{s}"),
         }?;
         match self {
             White => write!(f, " text-black"),
+            Custom(_) => Ok(()),
             _ => write!(f, " text-white"),
         }
     }
