@@ -1,19 +1,19 @@
-.checkmark-light:checked {
+.mu-checkmark-light:checked {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' fill='%23e7e5e4' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.207 4.793a1 1 0 0 1 0 1.414l-5 5a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L6.5 9.086l4.293-4.293a1 1 0 0 1 1.414 0z'/%3E%3C/svg%3E");
 }
-.checkmark-dark:checked {
+.mu-checkmark-dark:checked {
   background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 16 16' fill='%23292524' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.207 4.793a1 1 0 0 1 0 1.414l-5 5a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L6.5 9.086l4.293-4.293a1 1 0 0 1 1.414 0z'/%3E%3C/svg%3E");
 }
 
 .mu-input-base {
-  @apply m-0 min-w-0 select-none rounded border border-solid border-stone-300 dark:border-stone-700 mu-more-bg align-middle text-sm mu-ring mu-transition-100 mu-text-color;
+  @apply tw-m-0 tw-min-w-0 tw-select-none tw-rounded tw-border tw-border-solid tw-border-stone-300 dark:tw-border-stone-700 mu-more-bg tw-align-middle tw-text-sm mu-ring mu-transition-100 mu-text-color;
 }
 
 .mu-input {
-  @apply mu-input-base px-2 py-1;
+  @apply mu-input-base tw-px-2 tw-py-1;
 }
 
 
 .mu-checkbox {
-  @apply mu-input-base checkmark-light flex-shrink-0 appearance-none p-2;
+  @apply mu-input-base mu-checkmark-light tw-flex-shrink-0 tw-appearance-none tw-p-2;
 }

@@ -1,33 +1,33 @@
 .mu-less-bg {
-  @apply bg-stone-50 dark:bg-stone-950;
+  @apply tw-bg-stone-50 dark:tw-bg-stone-950;
 }
 .mu-main-bg {
-  @apply bg-stone-100 dark:bg-stone-900;
+  @apply tw-bg-stone-100 dark:tw-bg-stone-900;
 }
 .mu-more-bg {
-  @apply bg-stone-200 dark:bg-stone-800;
+  @apply tw-bg-stone-200 dark:tw-bg-stone-800;
 }
 
 .mu-prose {
-  @apply prose prose-stone dark:prose-invert;
+  @apply tw-prose tw-prose-stone dark:tw-prose-invert;
 }
 
 .mu-ring {
-  @apply focus-visible:ring-[3px] focus-visible:ring-stone-300 focus-visible:dark:ring-stone-700 focus-visible:border-0 outline-none;
+  @apply focus-visible:tw-ring-[3px] focus-visible:tw-ring-stone-300 focus-visible:dark:tw-ring-stone-700 focus-visible:tw-border-0 tw-outline-none;
 }
 
 .mu-transition-base {
-  @apply transition-all ease-in-out;
+  @apply tw-transition-all tw-ease-in-out;
 }
 
 .mu-transition {
-  @apply duration-200 mu-transition-base;
+  @apply tw-duration-200 mu-transition-base;
 }
 
 .mu-transition-100 {
-  @apply duration-100 mu-transition-base;
+  @apply tw-duration-100 mu-transition-base;
 }
 
 .mu-text-color {
-    @apply text-stone-700 dark:text-stone-300;
+    @apply tw-text-stone-700 dark:tw-text-stone-300;
 }
