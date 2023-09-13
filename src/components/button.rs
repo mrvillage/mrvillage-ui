@@ -52,7 +52,7 @@ impl Display for ButtonColor {
             Black => {
                 write!(
                     f,
-                    "tw-bg-black hover:tw-bg-stone-800 active:tw-bg-stone-700"
+                    "tw-bg-black hover:tw-bg-stone-700 active:tw-bg-stone-600"
                 )
             },
             White => {
@@ -64,99 +64,99 @@ impl Display for ButtonColor {
             Stone => {
                 write!(
                     f,
-                    "tw-bg-stone-700 hover:tw-bg-stone-800 active:tw-bg-stone-900"
+                    "tw-bg-stone-600 hover:tw-bg-stone-700 active:tw-bg-stone-800"
                 )
             },
-            Red => write!(f, "tw-bg-red-700 hover:tw-bg-red-800 active:tw-bg-red-900"),
+            Red => write!(f, "tw-bg-red-600 hover:tw-bg-red-700 active:tw-bg-red-800"),
             Orange => {
                 write!(
                     f,
-                    "tw-bg-orange-700 hover:tw-bg-orange-800 active:tw-bg-orange-900"
+                    "tw-bg-orange-600 hover:tw-bg-orange-700 active:tw-bg-orange-800"
                 )
             },
             Amber => {
                 write!(
                     f,
-                    "tw-bg-amber-700 hover:tw-bg-amber-800 active:tw-bg-amber-900"
+                    "tw-bg-amber-600 hover:tw-bg-amber-700 active:tw-bg-amber-800"
                 )
             },
             Yellow => {
                 write!(
                     f,
-                    "tw-bg-yellow-700 hover:tw-bg-yellow-800 active:tw-bg-yellow-900"
+                    "tw-bg-yellow-600 hover:tw-bg-yellow-700 active:tw-bg-yellow-800"
                 )
             },
             Lime => {
                 write!(
                     f,
-                    "tw-bg-lime-700 hover:tw-bg-lime-800 active:tw-bg-lime-900"
+                    "tw-bg-lime-600 hover:tw-bg-lime-700 active:tw-bg-lime-800"
                 )
             },
             Green => {
                 write!(
                     f,
-                    "tw-bg-green-700 hover:tw-bg-green-800 active:tw-bg-green-900"
+                    "tw-bg-green-600 hover:tw-bg-green-700 active:tw-bg-green-800"
                 )
             },
             Emerald => {
                 write!(
                     f,
-                    "tw-bg-emerald-700 hover:tw-bg-emerald-800 active:tw-bg-emerald-900"
+                    "tw-bg-emerald-600 hover:tw-bg-emerald-700 active:tw-bg-emerald-800"
                 )
             },
             Teal => {
                 write!(
                     f,
-                    "tw-bg-teal-700 hover:tw-bg-teal-800 active:tw-bg-teal-900"
+                    "tw-bg-teal-600 hover:tw-bg-teal-700 active:tw-bg-teal-800"
                 )
             },
             Cyan => {
                 write!(
                     f,
-                    "tw-bg-cyan-700 hover:tw-bg-cyan-800 active:tw-bg-cyan-900"
+                    "tw-bg-cyan-600 hover:tw-bg-cyan-700 active:tw-bg-cyan-800"
                 )
             },
-            Sky => write!(f, "tw-bg-sky-700 hover:tw-bg-sky-800 active:tw-bg-sky-900"),
+            Sky => write!(f, "tw-bg-sky-600 hover:tw-bg-sky-700 active:tw-bg-sky-800"),
             Blue => {
                 write!(
                     f,
-                    "tw-bg-blue-700 hover:tw-bg-blue-800 active:tw-bg-blue-900"
+                    "tw-bg-blue-600 hover:tw-bg-blue-700 active:tw-bg-blue-800"
                 )
             },
             Indigo => {
                 write!(
                     f,
-                    "tw-bg-indigo-700 hover:tw-bg-indigo-800 active:tw-bg-indigo-900"
+                    "tw-bg-indigo-600 hover:tw-bg-indigo-700 active:tw-bg-indigo-800"
                 )
             },
             Violet => {
                 write!(
                     f,
-                    "tw-bg-violet-700 hover:tw-bg-violet-800 active:tw-bg-violet-900"
+                    "tw-bg-violet-600 hover:tw-bg-violet-700 active:tw-bg-violet-800"
                 )
             },
             Purple => {
                 write!(
                     f,
-                    "tw-bg-purple-700 hover:tw-bg-purple-800 active:tw-bg-purple-900"
+                    "tw-bg-purple-600 hover:tw-bg-purple-700 active:tw-bg-purple-800"
                 )
             },
             Fuchsia => {
                 write!(
                     f,
-                    "tw-bg-fuchsia-700 hover:tw-bg-fuchsia-800 active:tw-bg-fuchsia-900"
+                    "tw-bg-fuchsia-600 hover:tw-bg-fuchsia-700 active:tw-bg-fuchsia-800"
                 )
             },
             Pink => {
                 write!(
                     f,
-                    "tw-bg-pink-700 hover:tw-bg-pink-800 active:tw-bg-pink-900"
+                    "tw-bg-pink-600 hover:tw-bg-pink-700 active:tw-bg-pink-800"
                 )
             },
             Rose => {
                 write!(
                     f,
-                    "tw-bg-rose-700 hover:tw-bg-rose-800 active:tw-bg-rose-900"
+                    "tw-bg-rose-600 hover:tw-bg-rose-700 active:tw-bg-rose-800"
                 )
             },
             None => write!(f, ""),
