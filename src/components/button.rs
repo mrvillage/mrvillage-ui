@@ -41,6 +41,7 @@ pub enum ButtonColor {
     Pink,
     Rose,
     None,
+    Transparent,
 }
 
 impl Display for ButtonColor {
@@ -159,6 +160,12 @@ impl Display for ButtonColor {
                 )
             },
             None => write!(f, ""),
+            Transparent => {
+                write!(
+                    f,
+                    "tw-bg-black tw-bg-opacity-0 hover:tw-bg-opacity-10 active:bg-opacity-20"
+                )
+            },
         }?;
         match self {
             White => write!(f, " tw-text-black"),
