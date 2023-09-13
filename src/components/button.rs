@@ -7,16 +7,10 @@ use serde::{Deserialize, Serialize};
 pub fn Button(
     children: Children,
     #[prop(into)] color: MaybeSignal<ButtonColor>,
+    #[prop(into, optional)] size: MaybeSignal<ButtonSize>,
     #[prop(into, optional)] class: MaybeSignal<String>,
 ) -> impl IntoView {
-    let class = move || {
-        format!(
-            "rounded px-2.5 py-1 align-middle text-sm font-semibold mu-ring mu-transition \
-             select-none {} {}",
-            color(),
-            class(),
-        )
-    };
+    let class = move || format!("mu-button {} {}", color(), class(),);
     view! {
         <button class=class>
             {children()}
@@ -90,6 +84,22 @@ impl Display for ButtonColor {
             White => write!(f, " text-black"),
             None => write!(f, ""),
             _ => write!(f, " text-white"),
+        }
+    }
+}
+
+#[derive(Copy, Clone, Debug, Serialize, Deserialize, Default)]
+pub enum ButtonSize {
+    #[default]
+    Base,
+}
+
+impl Display for ButtonSize {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        use ButtonSize::*;
+
+        match self {
+            Base => write!(f, "mu-button"),
         }
     }
 }

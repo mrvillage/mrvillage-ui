@@ -1,0 +1,7 @@
+.mu-button-base {
+  @apply rounded align-middle font-semibold mu-ring mu-transition-select-none
+}
+
+.mu-button {
+  @apply mu-button-base px-2.5 py-1 text-sm;
+}
