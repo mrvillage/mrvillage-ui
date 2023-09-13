@@ -1,15 +1,15 @@
 .mu-button-base {
-  @apply tw-rounded tw-align-middle tw-font-semibold mu-ring mu-transition tw-select-none
+  @apply tw-rounded tw-align-middle tw-font-semibold mu-ring mu-transition tw-select-none tw-px-2.5 tw-py-1;
 }
 
 .mu-button {
-  @apply mu-button-base tw-px-2.5 tw-py-1 tw-text-sm;
+  @apply mu-button-base tw-text-sm;
 }
 
 .mu-button-lg {
-  @apply mu-button-base tw-px-2.5 tw-py-1 tw-text-base;
+  @apply mu-button-base tw-text-base;
 }
 
 .mu-button-xl {
-  @apply mu-button-base tw-px-2.5 tw-py-1 tw-text-lg;
+  @apply mu-button-base tw-text-lg;
 }
