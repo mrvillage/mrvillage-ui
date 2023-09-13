@@ -1,5 +1,5 @@
 .mu-button-base {
-  @apply tw-rounded tw-align-middle tw-font-semibold mu-ring mu-transition tw-select-none
+  @apply tw-rounded tw-align-middle tw-font-semibold mu-ring mu-transition tw-select-none shadow-md;
 }
 
 .mu-button {
