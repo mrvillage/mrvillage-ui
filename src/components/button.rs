@@ -179,6 +179,8 @@ impl Display for ButtonColor {
 pub enum ButtonSize {
     #[default]
     Base,
+    Lg,
+    Xl,
 }
 
 impl Display for ButtonSize {
@@ -187,6 +189,8 @@ impl Display for ButtonSize {
 
         match self {
             Base => write!(f, "mu-button"),
+            Lg => write!(f, "mu-button-lg"),
+            Xl => write!(f, "mu-button-xl"),
         }
     }
 }

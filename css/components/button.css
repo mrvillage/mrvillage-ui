@@ -5,3 +5,11 @@
 .mu-button {
   @apply mu-button-base tw-px-2.5 tw-py-1 tw-text-sm;
 }
+
+.mu-button-lg {
+  @apply mu-button-base tw-px-2.5 tw-py-1 tw-text-base;
+}
+
+.mu-button-xl {
+  @apply mu-button-base tw-px-2.5 tw-py-1 tw-text-lg;
+}
