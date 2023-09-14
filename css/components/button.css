@@ -11,5 +11,13 @@
 }
 
 .mu-button-xl {
-  @apply mu-button-base tw-px-3 tw-py-1 tw-text-lg;
+  @apply mu-button-base tw-px-3 tw-py-1 tw-text-xl;
+}
+
+.mu-button-xxl {
+  @apply mu-button-base tw-px-3 tw-py-1.5 tw-text-2xl;
+}
+
+.mu-button-xxxl {
+  @apply mu-button-base tw-px-3 tw-py-1.5 tw-text-3xl;
 }

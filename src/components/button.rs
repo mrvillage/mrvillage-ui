@@ -181,6 +181,8 @@ pub enum ButtonSize {
     Base,
     Lg,
     Xl,
+    Xxl,
+    Xxxl,
 }
 
 impl Display for ButtonSize {
@@ -191,6 +193,8 @@ impl Display for ButtonSize {
             Base => write!(f, "mu-button"),
             Lg => write!(f, "mu-button-lg"),
             Xl => write!(f, "mu-button-xl"),
+            Xxl => write!(f, "mu-button-xxl"),
+            Xxxl => write!(f, "mu-button-xxxl"),
         }
     }
 }
