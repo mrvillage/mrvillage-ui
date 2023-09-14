@@ -786,11 +786,12 @@ dependencies = [
 [[package]]
 name = "leptos-tabler-icons"
 version = "0.1.1"
-source = "git+https://github.com/mrvillage/leptos-tabler-icons.git?branch=master#d841c1739b6760fd595e2dac9dfe7d000191a620"
+source = "git+https://github.com/mrvillage/leptos-tabler-icons.git?branch=master#cbeadef8fb848390a1b0c2048b575a5ee20e4580"
 dependencies = [
  "include_dir",
  "leptos",
  "regex",
+ "tracing",
 ]
 
 [[package]]
