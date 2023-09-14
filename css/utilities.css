@@ -29,5 +29,9 @@
 }
 
 .mu-text-color {
-    @apply tw-text-stone-700 dark:tw-text-stone-300;
+  @apply tw-text-stone-700 dark:tw-text-stone-300;
+}
+
+.mu-text-strong {
+  @apply tw-text-stone-950 dark:tw-text-white;
 }
