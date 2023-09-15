@@ -35,7 +35,7 @@
 }
 
 .mu-button-red {
-    @apply w-bg-red-600 hover:tw-bg-red-700 active:tw-bg-red-800 tw-text-white;
+    @apply tw-bg-red-600 hover:tw-bg-red-700 active:tw-bg-red-800 tw-text-white;
 }
 
 .mu-button-orange {
@@ -103,5 +103,5 @@
 }
 
 .mu-button-transparent {
-  @apply tw-bg-black tw-bg-opacity-0 hover:tw-bg-opacity-10 active:bg-opacity-20 tw-text-white;
+  @apply tw-bg-black tw-bg-opacity-0 hover:tw-bg-opacity-10 active:tw-bg-opacity-20 tw-text-white;
 }
