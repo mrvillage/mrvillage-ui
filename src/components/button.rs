@@ -6,18 +6,11 @@ use serde::{Deserialize, Serialize};
 #[component]
 pub fn Button(
     children: Children,
-    #[prop(into, optional)] color: MaybeSignal<Option<ButtonColor>>,
+    #[prop(into, optional)] color: MaybeSignal<ButtonColor>,
     #[prop(into, optional)] size: MaybeSignal<ButtonSize>,
     #[prop(into, optional)] class: MaybeSignal<String>,
 ) -> impl IntoView {
-    let class = move || {
-        format!(
-            "mu-button {} {} {}",
-            color().map(|s| s.to_string()).unwrap_or_else(String::new),
-            size(),
-            class(),
-        )
-    };
+    let class = move || format!("mu-button {} {} {}", color(), size(), class(),);
     view! {
         <button class=class>
             {children()}
@@ -25,8 +18,10 @@ pub fn Button(
     }
 }
 
-#[derive(Copy, Clone, Debug, Serialize, Deserialize)]
+#[derive(Copy, Clone, Debug, Serialize, Deserialize, Default)]
 pub enum ButtonColor {
+    #[default]
+    None,
     Black,
     White,
     Stone,
@@ -55,6 +50,7 @@ impl Display for ButtonColor {
         use ButtonColor::*;
 
         match self {
+            None => write!(f, ""),
             Black => write!(f, "mu-button-black"),
             White => write!(f, "mu-button-white"),
             Stone => write!(f, "mu-button-stone"),
