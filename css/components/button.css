@@ -103,5 +103,5 @@
 }
 
 .mu-button-transparent {
-  @apply tw-bg-black tw-bg-opacity-0 hover:tw-bg-opacity-20 active:tw-bg-opacity-40 tw-text-white tw-shadow-none hover:shadow-md active:shadow-md;
+  @apply tw-bg-black tw-bg-opacity-0 hover:tw-bg-opacity-20 active:tw-bg-opacity-40 tw-text-white tw-shadow-none hover:tw-shadow-md active:tw-shadow-md;
 }
