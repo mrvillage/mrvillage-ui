@@ -9,8 +9,7 @@ tracing = "0.1"
 wasm-bindgen = "0.2"
 
 [dependencies.leptos]
-git = "https://github.com/leptos-rs/leptos.git"
-branch = "main"
+version = "0.5"
 features = ["rustls", "serde", "nightly"]
 
 [dependencies.serde]
