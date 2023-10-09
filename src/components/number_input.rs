@@ -1,11 +1,12 @@
 use std::str::FromStr;
 
-use leptos::{component, view, IntoAttribute, IntoView, MaybeSignal, SignalGetUntracked};
+use leptos::*;
 
 #[component]
 pub fn NumberInput<T>(
     #[prop(into, optional)] value: MaybeSignal<T>,
     #[prop(into, optional)] class: MaybeSignal<String>,
+    #[prop(attrs)] attrs: Vec<(&'static str, Attribute)>,
 ) -> impl IntoView
 where
     T: FromStr + 'static + Default + Clone + IntoAttribute,
@@ -13,6 +14,6 @@ where
 {
     let class = move || format!("mu-input {}", class());
     view! {
-        <input type="text" inputmode="numeric" class=class value=value.get_untracked() prop:value=value />
+        <input {..attrs} type="text" inputmode="numeric" class=class value=value.get_untracked() prop:value=value />
     }
 }

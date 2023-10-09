@@ -1,6 +1,6 @@
 use std::fmt::{Debug, Display};
 
-use leptos::{component, view, Children, IntoAttribute, IntoView, MaybeSignal};
+use leptos::*;
 use serde::{Deserialize, Serialize};
 
 #[component]
@@ -9,10 +9,11 @@ pub fn Button(
     #[prop(into, optional)] color: MaybeSignal<ButtonColor>,
     #[prop(into, optional)] size: MaybeSignal<ButtonSize>,
     #[prop(into, optional)] class: MaybeSignal<String>,
+    #[prop(attrs)] attrs: Vec<(&'static str, Attribute)>,
 ) -> impl IntoView {
-    let class = move || format!("mu-button {} {} {}", color(), size(), class(),);
+    let class = move || format!("mu-button {} {} {}", color(), size(), class());
     view! {
-        <button class=class>
+        <button {..attrs} class=class>
             {children()}
         </button>
     }

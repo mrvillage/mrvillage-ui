@@ -1,6 +1,6 @@
 use std::fmt::Display;
 
-use leptos::{component, view, IntoAttribute, IntoView, MaybeSignal};
+use leptos::*;
 use serde::{Deserialize, Serialize};
 
 #[component]
@@ -8,10 +8,11 @@ pub fn Checkbox(
     #[prop(into, optional)] value: MaybeSignal<bool>,
     #[prop(into)] color: MaybeSignal<CheckboxColor>,
     #[prop(into, optional)] class: MaybeSignal<String>,
+    #[prop(attrs)] attrs: Vec<(&'static str, Attribute)>,
 ) -> impl IntoView {
     let class = move || format!("mu-checkbox {} {}", color(), class(),);
     view! {
-        <input type="checkbox" class=class prop:value=value />
+        <input {..attrs} type="checkbox" class=class prop:value=value />
     }
 }
 
